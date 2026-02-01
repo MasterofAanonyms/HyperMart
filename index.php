@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>HyperMart | Buy smarter. Live better.</title>
+
     <link rel="shortcut icon" href="public/images/icon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="public/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -118,8 +118,8 @@
     </div>
 
     <!-- Deals Section -->
-    <section class="deals-section" style="background-color: #fff; padding: 50px 0;">
-        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+    <section class="deals-section">
+        <div class="container deals-container">
 
             <!-- Left Column: 50% Discount -->
             <div class="deal-column">
@@ -139,7 +139,7 @@
                     <div class="product-card glow-yellow">
                         <div class="card-image-wrapper">
                             <img src="public/uploads/products/p1.png" alt="Product" class="card-img">
-                            <button class="quick-view-btn">
+                            <button class="quick-view-btn" onclick="openQuickView()">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -1037,71 +1037,95 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-col brand-col">
-                    <div class="footer-logo flex ">
-                        <img src="public/images/icon.ico" alt="HyperMart" style="height: 40px; margin-bottom: 20px;">
-                        <h1 style="font-size: 24px; margin-left: 10px;">| Hyper🛒 Mart</h1>
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="quick-view-modal">
+        <div class="quick-view-overlay" onclick="closeQuickView()"></div>
+        <div class="quick-view-content">
+            <button class="quick-view-close" onclick="closeQuickView()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="24" height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <div class="quick-view-body">
+                <!-- Left: Product Image -->
+                <div class="qv-images">
+                    <div class="qv-main-image">
+                        <img id="qvMainImg" src="public/uploads/products/p1.png" alt="Product">
                     </div>
-                    <p class="footer-desc">This project is developed primarily for learning high-performance online
-                        marketplace using modern software engineering practices.</p>
                 </div>
-                <!-- Quick Links -->
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">Collections</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div>
-                <!-- Customer Service -->
-                <div class="footer-col">
-                    <h4>Customer Service</h4>
-                    <ul>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                <!-- Contact Info -->
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul>
-                        <li style="display: flex; gap: 10px; align-items: flex-start;">
-                            <span>📍</span>
-                            <span>123 Shopping Ave, <br>Retail City, RC 54321</span>
-                        </li>
-                        <li style="display: flex; gap: 10px; align-items: center;">
-                            <span>📧</span>
-                            <span>support@hypermart.com</span>
-                        </li>
-                        <li style="display: flex; gap: 10px; align-items: center;">
-                            <span>📞</span>
-                            <span>+1 234 567 890</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 <a href="#" class="text-decoration-none hover:text-yellow-500">HyperMart</a>. All rights
-                    reserved.</p>
-                <div class="payment-methods">
-                    <span style="font-size: 12px;">Credit/Debit Cards</span>
-                    <span style="font-size: 12px;">PayPal</span>
-                    <span style="font-size: 12px;">Bank Transfer</span>
+                <!-- Right: Product Details -->
+                <div class="qv-details">
+                    <h2 class="qv-title" id="qvTitle">Men's CloudComfort™ Platform Slides - GOOD ELASTICITY Slippers that can Massage</h2>
+                    
+                    <!-- Sold & Seller Info -->
+                    <div class="qv-meta">
+                        <span class="qv-sold-count">5,284 sold</span>
+                        <span class="qv-separator">|</span>
+                        <span class="qv-seller">Sold by <a href="#">HyperMart</a></span>
+                    </div>
+
+                    <!-- Best Seller Badge -->
+                    <div class="qv-best-seller">
+                        <span class="best-seller-badge">#1 Best Seller</span>
+                        <span>from this seller</span>
+                    </div>
+
+                    <!-- Price Section -->
+                    <div class="qv-price-section">
+                        <div class="qv-price-row">
+                            <span class="qv-original-price" id="qvOldPrice">Rs. 4,800.00</span>
+                            <span class="qv-label">Est.</span>
+                            <span class="qv-current-price" id="qvPrice">Rs. 2,284.42</span>
+                        </div>
+                        <div class="qv-promo-info">
+                            after applying promos to <strong>Rs. 1,900.67</strong> | Ends in <span class="qv-timer">11:06:41</span>
+                        </div>
+                        <span class="qv-discount-tag">47% OFF limited time</span>
+                    </div>
+
+                    <!-- Big Sale Timer -->
+                    <div class="qv-big-sale">
+                        <span class="big-sale-label">Big sale</span>
+                        <div class="sale-timer-bar"></div>
+                        <span class="sale-timer-icon">⏱</span>
+                        <span class="sale-ends">Ends in <strong id="qvCountdown">13:00:15:31</strong></span>
+                    </div>
+
+                    <!-- Color Options -->
+                    <div class="qv-option-group">
+                        <label class="qv-option-label">Color: <span id="selectedColor">Black</span></label>
+                        <div class="qv-color-options">
+                            <button class="qv-color-btn active" data-color="Black" style="background: #1a1a1a;" onclick="selectColor(this)"></button>
+                            <button class="qv-color-btn" data-color="Grey" style="background: #808080;" onclick="selectColor(this)"></button>
+                            <button class="qv-color-btn" data-color="White" style="background: #f5f5f5; border: 1px solid #ddd;" onclick="selectColor(this)"></button>
+                            <button class="qv-color-btn" data-color="Khaki" style="background: #c3b091;" onclick="selectColor(this)"></button>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="qv-actions">
+                        <button class="qv-add-cart-main">
+                            -45% now! Add to cart!
+                        </button>
+                        <button class="qv-wishlist" onclick="toggleWishlist(this)">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="24" height="24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- All Details Link -->
+                    <a href="#" class="qv-all-details">All details <span>›</span></a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="public/js/animate.js"></script>
+    <?php include "public/components/footer.php" ?>
+
+    <script src="public/js/animete.js"></script>
 </body>
 
 </html>

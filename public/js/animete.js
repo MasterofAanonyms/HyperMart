@@ -219,3 +219,148 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.15 });
 
 revealElements.forEach(el => revealObserver.observe(el));
+
+// ===== QUICK VIEW MODAL FUNCTIONALITY =====
+
+// Product data for quick view (in production, this would come from database)
+const productData = {
+    1: {
+        title: "Men's CloudComfort™ Platform Slides",
+        brand: "MANDALI",
+        subtitle: "Slippers that can Massage - GOOD ELASTICITY",
+        currentPrice: "Rs. 2,284.42",
+        originalPrice: "Rs. 4,800.00",
+        savings: "Save Rs. 2,515",
+        discount: "-50%",
+        rating: 4.5,
+        reviews: "1,984 reviews",
+        sold: "5K+ sold",
+        image: "public/uploads/products/p1.png",
+        colors: ["Black", "Grey Golden", "White", "Khaki"],
+        sizes: ["38", "39", "40", "41", "42", "43", "44", "45"],
+        highlights: [
+            "✨ Premium quality EVA material",
+            "🦶 Massage acupressure sole design",
+            "💧 Waterproof & quick-dry",
+            "🏃 Lightweight & comfortable"
+        ]
+    }
+};
+
+// Open Quick View Modal
+function openQuickView(productId = 1) {
+    const quickViewModal = document.getElementById('quickViewModal');
+    if (quickViewModal) {
+        quickViewModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Load product data (currently using default)
+        const product = productData[productId] || productData[1];
+        
+        // Update modal content
+        const mainImg = document.getElementById('qvMainImg');
+        const title = document.getElementById('qvTitle');
+        const price = document.getElementById('qvPrice');
+        
+        if (mainImg && product.image) mainImg.src = product.image;
+        if (title) title.textContent = product.title;
+        if (price) price.textContent = product.currentPrice;
+    }
+}
+
+// Close Quick View Modal
+function closeQuickView() {
+    const quickViewModal = document.getElementById('quickViewModal');
+    if (quickViewModal) {
+        quickViewModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Change main image from thumbnail
+function changeMainImage(thumbnail) {
+    const mainImg = document.getElementById('qvMainImg');
+    if (mainImg && thumbnail) {
+        mainImg.src = thumbnail.src;
+        
+        // Update active state
+        document.querySelectorAll('.qv-thumb').forEach(t => t.classList.remove('active'));
+        thumbnail.classList.add('active');
+    }
+}
+
+// Select color
+function selectColor(btn) {
+    document.querySelectorAll('.qv-color-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const colorName = btn.dataset.color;
+    const selectedColorSpan = document.getElementById('selectedColor');
+    if (selectedColorSpan) selectedColorSpan.textContent = colorName;
+}
+
+// Select size
+function selectSize(btn) {
+    document.querySelectorAll('.qv-size-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    const selectedSizeSpan = document.getElementById('selectedSize');
+    if (selectedSizeSpan) selectedSizeSpan.textContent = btn.textContent;
+}
+
+// Change quantity
+function changeQuantity(delta) {
+    const input = document.getElementById('qvQuantity');
+    if (input) {
+        let value = parseInt(input.value) + delta;
+        value = Math.max(1, Math.min(99, value));
+        input.value = value;
+    }
+}
+
+// Toggle wishlist
+function toggleWishlist(btn) {
+    btn.classList.toggle('active');
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeQuickView();
+    }
+});
+
+// Attach click events to all quick view buttons
+document.addEventListener('DOMContentLoaded', () => {
+    const quickViewBtns = document.querySelectorAll('.quick-view-btn');
+    quickViewBtns.forEach((btn, index) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Get product info from the card
+            const card = btn.closest('.product-card');
+            if (card) {
+                const img = card.querySelector('.card-img');
+                const title = card.querySelector('.product-title');
+                const price = card.querySelector('.product-price');
+                const oldPrice = card.querySelector('.old-price');
+                
+                // Update modal with card data
+                const mainImg = document.getElementById('qvMainImg');
+                const qvTitle = document.getElementById('qvTitle');
+                const qvPrice = document.getElementById('qvPrice');
+                const thumbs = document.querySelectorAll('.qv-thumb');
+                
+                if (mainImg && img) {
+                    mainImg.src = img.src;
+                    thumbs.forEach(t => t.src = img.src);
+                }
+                if (qvTitle && title) qvTitle.textContent = title.textContent;
+                if (qvPrice && price) qvPrice.textContent = price.textContent;
+            }
+            
+            openQuickView();
+        });
+    });
+});

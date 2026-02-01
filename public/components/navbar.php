@@ -141,14 +141,13 @@
                 <div class="relative group dropdown-container hidden lg:block">
                     <button id="noti-menu-btn"
                         class="text-black hover:text-brand-yellow transition-transform hover:scale-110 duration-200 p-2 rounded-full hover:bg-gray-50 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"
                             class="w-8 h-8 sm:w-9 sm:h-9">
-                            <path fill-rule="evenodd"
-                                d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9c.46.557.97 1.054 1.516 1.482l.008.006.009.006a6.004 6.004 0 01-3.066 0l.009-.006.008-.006a12.15 12.15 0 011.516-1.482z"
-                                clip-rule="evenodd" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
                         </svg>
                         <span
-                            class="absolute top-2 right-2 w-2.5 h-2.5 bg-red-500 rounded-full border border-white animate-pulse"></span>
+                            class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white animate-pulse"></span>
                     </button>
                     <!-- Dropdown Menu -->
                     <div id="noti-dropdown"
