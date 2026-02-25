@@ -15,7 +15,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -328,7 +330,7 @@
     </section>
 
     <!-- Summer Offers Section -->
-    <section class="summer-section reveal">
+    <section class="summer-section reveal" id="summer-offers">
         <div class="container">
             <!-- Header -->
             <div class="summer-header">
@@ -424,12 +426,12 @@
                                         d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                                 </svg>
                             </button>
-                            <button class="action-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                </svg>
+                            <button
+                                class="relative text-black hover:text-brand-yellow transition-transform hover:scale-110 duration-200 p-2 rounded-full hover:bg-gray-50 group">
+                                <img src="public/images/icons/cart.svg" alt="Cart" class="w-8 h-8 sm:w-9 sm:h-9">
+                                <span
+                                    class="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border border-white group-hover:animate-ping"></span>
+                            </button>
                             </button>
                         </div>
                         <button class="buy-now-btn">Buy Now</button>
@@ -1042,11 +1044,12 @@
         <div class="quick-view-overlay" onclick="closeQuickView()"></div>
         <div class="quick-view-content">
             <button class="quick-view-close" onclick="closeQuickView()">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="24" height="24">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" width="24" height="24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
-            
+
             <div class="quick-view-body">
                 <!-- Left: Product Image -->
                 <div class="qv-images">
@@ -1057,8 +1060,9 @@
 
                 <!-- Right: Product Details -->
                 <div class="qv-details">
-                    <h2 class="qv-title" id="qvTitle">Men's CloudComfort™ Platform Slides - GOOD ELASTICITY Slippers that can Massage</h2>
-                    
+                    <h2 class="qv-title" id="qvTitle">Men's CloudComfort™ Platform Slides - GOOD ELASTICITY Slippers
+                        that can Massage</h2>
+
                     <!-- Sold & Seller Info -->
                     <div class="qv-meta">
                         <span class="qv-sold-count">5,284 sold</span>
@@ -1080,7 +1084,8 @@
                             <span class="qv-current-price" id="qvPrice">Rs. 2,284.42</span>
                         </div>
                         <div class="qv-promo-info">
-                            after applying promos to <strong>Rs. 1,900.67</strong> | Ends in <span class="qv-timer">11:06:41</span>
+                            after applying promos to <strong>Rs. 1,900.67</strong> | Ends in <span
+                                class="qv-timer">11:06:41</span>
                         </div>
                         <span class="qv-discount-tag">47% OFF limited time</span>
                     </div>
@@ -1097,10 +1102,15 @@
                     <div class="qv-option-group">
                         <label class="qv-option-label">Color: <span id="selectedColor">Black</span></label>
                         <div class="qv-color-options">
-                            <button class="qv-color-btn active" data-color="Black" style="background: #1a1a1a;" onclick="selectColor(this)"></button>
-                            <button class="qv-color-btn" data-color="Grey" style="background: #808080;" onclick="selectColor(this)"></button>
-                            <button class="qv-color-btn" data-color="White" style="background: #f5f5f5; border: 1px solid #ddd;" onclick="selectColor(this)"></button>
-                            <button class="qv-color-btn" data-color="Khaki" style="background: #c3b091;" onclick="selectColor(this)"></button>
+                            <button class="qv-color-btn active" data-color="Black" style="background: #1a1a1a;"
+                                onclick="selectColor(this)"></button>
+                            <button class="qv-color-btn" data-color="Grey" style="background: #808080;"
+                                onclick="selectColor(this)"></button>
+                            <button class="qv-color-btn" data-color="White"
+                                style="background: #f5f5f5; border: 1px solid #ddd;"
+                                onclick="selectColor(this)"></button>
+                            <button class="qv-color-btn" data-color="Khaki" style="background: #c3b091;"
+                                onclick="selectColor(this)"></button>
                         </div>
                     </div>
 
@@ -1110,8 +1120,10 @@
                             -45% now! Add to cart!
                         </button>
                         <button class="qv-wishlist" onclick="toggleWishlist(this)">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="24" height="24">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" width="24" height="24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                             </svg>
                         </button>
                     </div>

@@ -437,7 +437,7 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <p class="text-xs text-red-500 mt-1 hidden" id="matchError">Passwords do not match</p>
+                                <p class="text-xs text-red-500 mt-1 hidden" id="matchError">Passwords do not match</p>my
                             </div>
                             
                             <!-- Terms -->

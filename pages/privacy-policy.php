@@ -9,8 +9,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -39,17 +41,45 @@
 </head>
 
 <body class="bg-gray-50">
-    
+
     <!-- Navbar -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <a href="../index.php" class="flex items-center">
                     <img src="../public/images/logo.png" alt="HyperMart" class="h-10">
                 </a>
-                <a href="../index.php" class="text-gray-600 hover:text-brand-orange transition-colors">
-                    Back to Home
-                </a>
+
+                <!-- Expanded Nav Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.php"
+                        class="text-gray-900 font-semibold hover:text-brand-orange transition-colors">Home</a>
+                    <a href="shop.php"
+                        class="text-gray-900 font-semibold hover:text-brand-orange transition-colors">Shop</a>
+                    <a href="../index.php#summer-offers"
+                        class="text-gray-900 font-semibold hover:text-brand-orange transition-colors">Summer Offers</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <!-- Cart simple icon -->
+                    <button class="text-gray-700 hover:text-brand-orange relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                        </svg>
+                        <span
+                            class="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-4 h-4 rounded-full flex justify-center items-center font-bold">0</span>
+                    </button>
+                    <!-- Login simple icon -->
+                    <a href="hi.php" class="text-gray-700 hover:text-brand-orange">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -61,19 +91,29 @@
             <p class="text-gray-500 mb-8">Last updated: February 2, 2026</p>
 
             <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-                
+
                 <section>
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
-                    <p>HyperMart ("we" or "us" or "our") operates the HyperMart website. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our service and the choices you have associated with that data.</p>
+                    <p>HyperMart ("we" or "us" or "our") operates the HyperMart website. This page informs you of our
+                        policies regarding the collection, use, and disclosure of personal data when you use our service
+                        and the choices you have associated with that data.</p>
                 </section>
 
                 <section>
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Information Collection and Use</h2>
-                    <p>We collect several different types of information for various purposes to provide and improve our service to you:</p>
+                    <p>We collect several different types of information for various purposes to provide and improve our
+                        service to you:</p>
                     <ul class="list-disc list-inside space-y-2 mt-3">
-                        <li><strong>Personal Data:</strong> While using our service, we may ask you to provide certain personally identifiable information that can be used to contact or identify you ("Personal Data"). This may include: Email address, First name and last name, Phone number, Address, State, Province, ZIP/Postal code, City</li>
-                        <li><strong>Usage Data:</strong> We may also collect information on how the service is accessed and used ("Usage Data"). This may include information such as your computer's Internet Protocol address, browser type, browser version, pages you visit, time and date of your visit, and other diagnostic data.</li>
-                        <li><strong>Cookies:</strong> We use cookies and similar tracking technologies to track activity on our service and hold certain information.</li>
+                        <li><strong>Personal Data:</strong> While using our service, we may ask you to provide certain
+                            personally identifiable information that can be used to contact or identify you ("Personal
+                            Data"). This may include: Email address, First name and last name, Phone number, Address,
+                            State, Province, ZIP/Postal code, City</li>
+                        <li><strong>Usage Data:</strong> We may also collect information on how the service is accessed
+                            and used ("Usage Data"). This may include information such as your computer's Internet
+                            Protocol address, browser type, browser version, pages you visit, time and date of your
+                            visit, and other diagnostic data.</li>
+                        <li><strong>Cookies:</strong> We use cookies and similar tracking technologies to track activity
+                            on our service and hold certain information.</li>
                     </ul>
                 </section>
 
@@ -92,12 +132,16 @@
 
                 <section>
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Security of Data</h2>
-                    <p>The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+                    <p>The security of your data is important to us, but remember that no method of transmission over
+                        the Internet or method of electronic storage is 100% secure. While we strive to use commercially
+                        acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
                 </section>
 
                 <section>
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Changes to This Privacy Policy</h2>
-                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this Privacy Policy.</p>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting
+                        the new Privacy Policy on this page and updating the "Last updated" date at the top of this
+                        Privacy Policy.</p>
                 </section>
 
                 <section>
@@ -112,23 +156,32 @@
 
                 <section>
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Third-Party Links</h2>
-                    <p>Our service may contain links to third-party websites that are not operated by us. This Privacy Policy applies only to information collected through our service. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+                    <p>Our service may contain links to third-party websites that are not operated by us. This Privacy
+                        Policy applies only to information collected through our service. We have no control over and
+                        assume no responsibility for the content, privacy policies, or practices of any third-party
+                        sites or services.</p>
                 </section>
 
                 <section>
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">8. User Rights</h2>
-                    <p>Depending on your location, you may have certain rights regarding your personal data, including the right to access, correct, or delete your information. To exercise these rights, please contact us using the information provided above.</p>
+                    <p>Depending on your location, you may have certain rights regarding your personal data, including
+                        the right to access, correct, or delete your information. To exercise these rights, please
+                        contact us using the information provided above.</p>
                 </section>
 
                 <section>
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Children's Privacy</h2>
-                    <p>Our service does not address anyone under the age of 18. We do not knowingly collect personally identifiable information from children under 18. If we become aware that we have collected personal data from a child under 18 without verification of parental consent, we take steps to remove such information.</p>
+                    <p>Our service does not address anyone under the age of 18. We do not knowingly collect personally
+                        identifiable information from children under 18. If we become aware that we have collected
+                        personal data from a child under 18 without verification of parental consent, we take steps to
+                        remove such information.</p>
                 </section>
 
             </div>
 
             <div class="mt-12 p-6 bg-orange-50 border-l-4 border-brand-orange rounded">
-                <p class="text-sm text-gray-700">If you have any questions about this Privacy Policy, please contact us at <strong>privacy@hypermart.com</strong></p>
+                <p class="text-sm text-gray-700">If you have any questions about this Privacy Policy, please contact us
+                    at <strong>privacy@hypermart.com</strong></p>
             </div>
         </div>
     </div>
@@ -148,4 +201,5 @@
     </footer>
 
 </body>
+
 </html>
