@@ -43,15 +43,15 @@
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#"
+                <a href="#shop"
                     class="relative group text-gray-900 font-bold text-lg hover:text-brand-yellow transition-colors">
                     Shop
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a href="#"
-                    class="relative group text-gray-900 font-bold text-lg hover:text-brand-yellow transition-colors">
-                    New arrivals
+                <a href="#offer"
+                    class="relative group font-bold text-lg hover:text-brand-yellow transition-colors blink-soft">
+                    Leastest offers🏝️
                     <span
                         class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-yellow transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -141,8 +141,8 @@
                 <div class="relative group dropdown-container hidden lg:block">
                     <button id="noti-menu-btn"
                         class="text-black hover:text-brand-yellow transition-transform hover:scale-110 duration-200 p-2 rounded-full hover:bg-gray-50 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"
-                            class="w-8 h-8 sm:w-9 sm:h-9">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="currentColor" class="w-8 h-8 sm:w-9 sm:h-9">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
                         </svg>

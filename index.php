@@ -53,7 +53,7 @@
                         <h1>Buy Smarter.<br><span style="color: var(--hyper-orange);">Live Better.</span></h1>
                         <p>Top Brand Electronics with up to <b>40% <br>Discount.</b></p>
                         <div class="cta-group">
-                            <a href="#" class="btn-primary"
+                            <a href="#shop" class="btn-primary"
                                 style="background: #fff; color: #333; border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">Shop
                                 Details</a>
                         </div>
@@ -221,7 +221,7 @@
                 </div>
 
                 <div class="view-more-container">
-                    <a href="#" class="view-more-btn">View more →</a>
+                    <a href="pages/shop.php" class="view-more-btn">View more →</a>
                 </div>
             </div>
 
@@ -322,7 +322,7 @@
                 </div>
 
                 <div class="view-more-container">
-                    <a href="#" class="view-more-btn">View more →</a>
+                    <a href="pages/shop.php" class="view-more-btn">View more →</a>
                 </div>
             </div>
 
@@ -331,7 +331,7 @@
 
     <!-- Summer Offers Section -->
     <section class="summer-section reveal" id="summer-offers">
-        <div class="container">
+        <div class="container" id="offer">
             <!-- Header -->
             <div class="summer-header">
                 <img src="public/images/icons/coco.png" alt="Coconut Tree" class="coconut-icon">
@@ -426,12 +426,12 @@
                                         d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                                 </svg>
                             </button>
-                            <button
-                                class="relative text-black hover:text-brand-yellow transition-transform hover:scale-110 duration-200 p-2 rounded-full hover:bg-gray-50 group">
-                                <img src="public/images/icons/cart.svg" alt="Cart" class="w-8 h-8 sm:w-9 sm:h-9">
-                                <span
-                                    class="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border border-white group-hover:animate-ping"></span>
-                            </button>
+                            <button class="action-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                </svg>
                             </button>
                         </div>
                         <button class="buy-now-btn">Buy Now</button>
@@ -559,7 +559,7 @@
                 </div>
             </div>
 
-            <button class="see-more-btn">See more</button>
+            <a href="pages/shop.php" class="see-more-btn">See more</a>
         </div>
     </section>
 
@@ -604,6 +604,10 @@
             </div>
         </div>
     </section>
+
+    <div id="shop" class="invisible ">
+
+    </div>
 
     <!-- Shop Section -->
     <section class="shop-section reveal">
@@ -1019,7 +1023,7 @@
                 </div>
             </div>
 
-            <button class="see-more-btn">See more</button>
+            <a href="pages/shop.php" class="see-more-btn">See more</a>
         </div>
     </section>
 

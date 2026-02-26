@@ -19,6 +19,11 @@
   --hyper-grey: #f3f3f3;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Accounts for the fixed navbar */
+}
+
 body {
   margin: 0;
   font-family:
@@ -1599,4 +1604,15 @@ body {
 .quick-view-content::-webkit-scrollbar-thumb {
   background: #d1d5db;
   border-radius: 3px;
+}
+
+.blink-soft {
+  animation: blinker 5s linear infinite;
+  color: rgb(255, 213, 0);
+  text-shadow: 0 0 10px rgb(255, 213, 0);
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }

@@ -253,15 +253,15 @@ function openQuickView(productId = 1) {
     if (quickViewModal) {
         quickViewModal.classList.add('active');
         document.body.style.overflow = 'hidden';
-        
+
         // Load product data (currently using default)
         const product = productData[productId] || productData[1];
-        
+
         // Update modal content
         const mainImg = document.getElementById('qvMainImg');
         const title = document.getElementById('qvTitle');
         const price = document.getElementById('qvPrice');
-        
+
         if (mainImg && product.image) mainImg.src = product.image;
         if (title) title.textContent = product.title;
         if (price) price.textContent = product.currentPrice;
@@ -282,7 +282,7 @@ function changeMainImage(thumbnail) {
     const mainImg = document.getElementById('qvMainImg');
     if (mainImg && thumbnail) {
         mainImg.src = thumbnail.src;
-        
+
         // Update active state
         document.querySelectorAll('.qv-thumb').forEach(t => t.classList.remove('active'));
         thumbnail.classList.add('active');
@@ -293,7 +293,7 @@ function changeMainImage(thumbnail) {
 function selectColor(btn) {
     document.querySelectorAll('.qv-color-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    
+
     const colorName = btn.dataset.color;
     const selectedColorSpan = document.getElementById('selectedColor');
     if (selectedColorSpan) selectedColorSpan.textContent = colorName;
@@ -303,7 +303,7 @@ function selectColor(btn) {
 function selectSize(btn) {
     document.querySelectorAll('.qv-size-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    
+
     const selectedSizeSpan = document.getElementById('selectedSize');
     if (selectedSizeSpan) selectedSizeSpan.textContent = btn.textContent;
 }
@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            
+
             // Get product info from the card
             const card = btn.closest('.product-card');
             if (card) {
@@ -345,13 +345,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const title = card.querySelector('.product-title');
                 const price = card.querySelector('.product-price');
                 const oldPrice = card.querySelector('.old-price');
-                
+
                 // Update modal with card data
                 const mainImg = document.getElementById('qvMainImg');
                 const qvTitle = document.getElementById('qvTitle');
                 const qvPrice = document.getElementById('qvPrice');
                 const thumbs = document.querySelectorAll('.qv-thumb');
-                
+
                 if (mainImg && img) {
                     mainImg.src = img.src;
                     thumbs.forEach(t => t.src = img.src);
@@ -359,8 +359,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (qvTitle && title) qvTitle.textContent = title.textContent;
                 if (qvPrice && price) qvPrice.textContent = price.textContent;
             }
-            
+
             openQuickView();
         });
     });
 });
+
+

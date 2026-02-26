@@ -218,16 +218,16 @@
     <!-- <div class="shop-page-header border-b border-gray-200"> -->
 
     <!-- Offer Banner Slider -->
-    <div class="relative overflow-hidden w-full bg-gray-100" style="height: 400px;">
+    <div class="relative overflow-hidden w-full bg-gray-100" style="height: 500px;">
         <div id="shop-slider" class="flex transition-transform duration-500 ease-in-out h-full"
             style="transform: translateX(0%);">
             <!-- Slide 1 -->
             <div class="min-w-full h-full relative">
-                <img src="https://static.vecteezy.com/system/resources/previews/046/032/139/non_2x/summer-podium-background-with-pink-and-yellow-leaves-summer-background-in-paper-craft-style-paper-cut-and-craft-style-vector.jpg"
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/658/593/small/close-up-of-colorful-t-shirts-on-hangers-photo.jpg"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
                     <div class="text-white text-center">
-                        <h2 class="text-4xl font-bold font-display mb-2">Summer Sale</h2>
+                        <h2 class="text-4xl font-bold font-display mb-2">🏷️ Summer Sale</h2>
                         <p class="text-xl">Up to 50% Off on Selected Items</p>
                     </div>
                 </div>
@@ -245,14 +245,47 @@
             </div>
             <!-- Slide 3 -->
             <div class="min-w-full h-full relative">
-                <img src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?q=80&w=2071&auto=format&fit=crop"
-                    class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <div class="text-white text-center">
-                        <h2 class="text-4xl font-bold font-display mb-2">New Arrivals</h2>
-                        <p class="text-xl">Discover the Latest Trends</p>
+                <!-- Promo Banners Section -->
+                <section class="promo-banners-section w-full h-full">
+                    <div class="promo-grid" style="height: 100%;">
+                        <!-- Banner 1 -->
+                        <div class="promo-item">
+                            <img src="../public/images/banner4.png" alt="Kids Clothes" class="promo-bg">
+                            <div class="promo-content">
+                                <h3 class="promo-title">KIDS<br>CLOTHES</h3>
+                                <p class="promo-discount">50%<br>OFF</p>
+                                <a href="#" class="promo-btn">GET HERE</a>
+                            </div>
+                        </div>
+                        <!-- Banner 2 -->
+                        <div class="promo-item">
+                            <img src="../public/images/banner5.png" alt="Womens Clothes" class="promo-bg">
+                            <div class="promo-content">
+                                <h3 class="promo-title">WOMENS<br>CLOTHES</h3>
+                                <p class="promo-discount">40%<br>OFF</p>
+                                <a href="#" class="promo-btn">GET HERE</a>
+                            </div>
+                        </div>
+                        <!-- Banner 3 -->
+                        <div class="promo-item">
+                            <img src="../public/images/banner6.png" alt="Footwear" class="promo-bg">
+                            <div class="promo-content">
+                                <h3 class="promo-title">EVERY<br>FOOTWARE</h3>
+                                <p class="promo-discount">75%<br>OFF</p>
+                                <a href="#" class="promo-btn">GET HERE</a>
+                            </div>
+                        </div>
+                        <!-- Banner 4 -->
+                        <div class="promo-item">
+                            <img src="../public/images/banner7.png" alt="Mens Clothes" class="promo-bg">
+                            <div class="promo-content">
+                                <h3 class="promo-title">MENS<br>CLOTHES</h3>
+                                <p class="promo-discount">50%<br>OFF</p>
+                                <a href="#" class="promo-btn">GET HERE</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
         <!-- Controls -->
@@ -646,43 +679,6 @@
                         <div class="card-details">
                             <h3 class="product-title">Designer Sunglasses</h3>
                             <p class="product-price" style="color:#b45309; font-weight:800;">Rs. 1499.00</p>
-                            <div class="card-actions">
-                                <button class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                    </svg></button>
-                                <button class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                    </svg></button>
-                            </div>
-                            <button class="buy-now-btn">Buy Now</button>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 9 -->
-                    <div class="product-card">
-                        <div class="card-image-wrapper">
-                            <img src="../public/uploads/products/p2.png" alt="Product" class="card-img"
-                                style="object-fit:cover;">
-                            <button class="quick-view-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg> Quick view
-                            </button>
-                        </div>
-                        <div class="card-details">
-                            <h3 class="product-title">Luxury Silk Tie</h3>
-                            <div class="price-row" style="margin-bottom: 5px;">
-                                <span class="old-price">Rs. 899.00</span>
-                                <span class="product-price" style="color:#b45309; font-weight:800;">Rs. 599.00</span>
-                            </div>
                             <div class="card-actions">
                                 <button class="action-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
