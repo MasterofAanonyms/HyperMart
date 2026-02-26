@@ -977,11 +977,35 @@ body {
     height: auto;
   }
   .promo-item {
-    height: 500px;
+    height: 50vh;
+    min-height: 250px;
+  }
+
+  /* When inside the slider, avoid overflowing the slider's fixed 500px height */
+  .relative .promo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+  }
+  .relative .promo-item {
+    height: auto;
+  }
+
+  .relative .promo-title {
+    font-size: 1.5rem;
+  }
+  .relative .promo-discount {
+    font-size: 2.5rem;
+    margin: 5px 0 15px 0;
+  }
+  .relative .promo-btn {
+    padding: 8px 20px;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 600px) {
+  /* For the default promo section on index.php */
   .promo-grid {
     grid-template-columns: 1fr;
   }
@@ -990,6 +1014,28 @@ body {
   }
   .promo-discount {
     font-size: 3rem;
+  }
+
+  /* For the slider version in shop.php to prevent mess */
+  .relative .promo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+  }
+  .relative .promo-item {
+    height: auto;
+  }
+  .relative .promo-title {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+  }
+  .relative .promo-discount {
+    font-size: 1.5rem;
+    margin: 5px 0 10px 0;
+  }
+  .relative .promo-btn {
+    padding: 6px 12px;
+    font-size: 0.7rem;
   }
 }
 

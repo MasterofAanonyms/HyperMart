@@ -223,12 +223,13 @@
             style="transform: translateX(0%);">
             <!-- Slide 1 -->
             <div class="min-w-full h-full relative">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/658/593/small/close-up-of-colorful-t-shirts-on-hangers-photo.jpg"
-                    class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-                    <div class="text-white text-center">
+                <img src="../public/images/summer_banner.png" class="w-full h-full object-cover">
+                <div class="absolute inset-0  flex items-center justify-center">
+                    <div class="text-black text-center">
                         <h2 class="text-4xl font-bold font-display mb-2">🏷️ Summer Sale</h2>
-                        <p class="text-xl">Up to 50% Off on Selected Items</p>
+                        <p class="text-xl mb-5">Up to 50% Off on Selected Items</p>
+                        <a href="#" class="text-white font-semibold rounded-2xl mt-2 px-6 py-2"
+                            style="text-decoration: none; background-color: var(--hyper-orange);">Get From here</a>
                     </div>
                 </div>
             </div>
